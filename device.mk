@@ -59,6 +59,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/qosmgr_rules.xml:system/etc/qosmgr_rules.xml
 
 PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/initlogo.rle:root/initlogo.rle888 \
 	$(LOCAL_PATH)/init.geehrc.rc:root/init.geehrc.rc \
 	$(LOCAL_PATH)/init.geehrc.usb.rc:root/init.geehrc.usb.rc \
 	$(LOCAL_PATH)/fstab.geehrc:root/fstab.geehrc \
