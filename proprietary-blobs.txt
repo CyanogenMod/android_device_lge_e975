@@ -93,6 +93,7 @@ lib/libsensor_reg.so
 lib/libsensor_user_cal.so
 lib/libxml.so
 lib/lib_dlb_msd.so
+lib/libWVphoneAPI.so
 lib/hw/camera.msm8960.so
 lib/hw/nfc.default.so
 lib/hw/sensors.msm8960.so
