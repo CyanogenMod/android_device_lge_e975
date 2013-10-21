@@ -57,6 +57,10 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/apq8064-tabla-snd-card_Button_Jack.kcm:system/usr/keychars/apq8064-tabla-snd-card_Button_Jack.kcm \
 	$(LOCAL_PATH)/keypad_8064.kcm:system/usr/keychars/keypad_8064.kcm
 
+#These are hardware-specific features
+PRODUCT_COPY_FILES += \
+	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density=320
 
@@ -85,6 +89,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
 	keystore.msm8960
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	telephony.lteOnCdmaDevice=0 \
+	ro.telephony.default_network=9 \
+	telephony.lteOnGsmDevice=1
 
 PRODUCT_PACKAGES += \
 	wpa_supplicant_overlay.conf \
