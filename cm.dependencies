@@ -4,6 +4,10 @@
    "target_path": "device/lge/gproj-common"
  },
  {
+   "repository": "android_hardware_qcom_fm",
+   "target_path": "hardware/qcom/fm"
+ },
+ {
    "repository": "lge-kernel-gproj",
    "target_path": "kernel/lge/gproj"
  }

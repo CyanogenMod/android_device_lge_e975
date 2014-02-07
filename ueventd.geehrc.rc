@@ -55,3 +55,4 @@
 /dev/pn544		0600	nfc	nfc
 
 /dev/block/mmcblk0p18     0660   root     system
+/dev/radio0               0660   system   radio
