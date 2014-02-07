@@ -99,4 +99,14 @@ PRODUCT_PACKAGES += \
 	wpa_supplicant_overlay.conf \
 	p2p_supplicant_overlay.conf
 
+## FM 
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/init.gee.fm.sh:system/etc/init.gee.fm.sh \
+	$(LOCAL_PATH)/audio_policy.conf:system/vendor/etc/audio_policy.conf
+
+PRODUCT_PACKAGES += \
+	FM2 \
+	qcom.fmradio \
+	libqcomfm_jni
+
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)

@@ -66,3 +66,7 @@ BOARD_SEPOLICY_UNION := \
         system.te \
         ueventd.te \
         wpa.te
+
+## We need this for FM support
+TARGET_QCOM_AUDIO_VARIANT := caf
+
