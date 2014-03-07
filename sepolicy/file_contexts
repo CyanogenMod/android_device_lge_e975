@@ -34,3 +34,5 @@
 
 /system/bin/hci_qcomm_init         u:object_r:hci_exec:s0
 /system/bin/bdAddrLoader           u:object_r:hci_exec:s0
+
+/sys/devices/virtual/input/lge_touch/keypad_enable     u:object_r:sysfs_writable:s0
