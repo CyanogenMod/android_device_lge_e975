@@ -66,3 +66,5 @@ BOARD_SEPOLICY_UNION := \
         system.te \
         ueventd.te \
         wpa.te
+
+BOARD_HARDWARE_CLASS += device/lge/e975/cmhw

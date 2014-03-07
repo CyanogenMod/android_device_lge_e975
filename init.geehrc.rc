@@ -43,6 +43,10 @@ on post-fs-data
     # LED On/Off synchronization
     chown system system /sys/class/leds/red/device/lock
 
+    chown root system /sys/devices/virtual/input/lge_touch/keypad_enable
+    chmod 0664 /sys/devices/virtual/input/lge_touch/keypad_enable
+    restorecon /sys/devices/virtual/input/lge_touch/keypad_enable
+
 service config_bluetooth /system/bin/sh /system/etc/init.geehrc.bt.sh "onboot"
     class core
     user root
