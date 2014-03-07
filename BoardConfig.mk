@@ -67,4 +67,7 @@ BOARD_SEPOLICY_UNION := \
         ueventd.te \
         wpa.te
 
+## We need this for FM support
+TARGET_QCOM_AUDIO_VARIANT := caf
+
 BOARD_HARDWARE_CLASS += device/lge/e975/cmhw
