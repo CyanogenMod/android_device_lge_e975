@@ -47,33 +47,6 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SEPOLICY_DIRS += \
         device/lge/e975/sepolicy
 
-BOARD_SEPOLICY_UNION += \
-       bluetooth_loader.te \
-       bridge.te \
-       camera.te \
-       conn_init.te \
-       device.te \
-       domain.te \
-       file.te \
-       file_contexts \
-       hostapd.te \
-       kickstart.te \
-       mediaserver.te \
-       mpdecision.te \
-       netmgrd.te \
-       property.te \
-       property_contexts \
-       qmux.te \
-       rild.te \
-       rmt.te \
-       sensors.te \
-       surfaceflinger.te \
-       system_server.te \
-       tee.te \
-       te_macros \
-       thermald.te \
-       ueventd.te
-
 ## We need this for FM support
 #TARGET_QCOM_AUDIO_VARIANT := caf
 
