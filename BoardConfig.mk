@@ -40,6 +40,8 @@ BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_FSTAB = device/lge/e975/fstab.geehrc
 
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2097152000 # 2000M. Actually 2048, but hold some in reserve
+
 -include vendor/lge/e975/BoardConfigVendor.mk
 
 BOARD_HAS_NO_SELECT_BUTTON := true
