@@ -30,12 +30,8 @@ on boot
     chown system system /sys/class/leds/led:green/brightness
 
 on post-fs-data
-    write /dev/wcnss_wlan 1
+    chown system system /dev/wcnss_wlan
     write /sys/module/wcnss_ssr_8960/parameters/enable_riva_ssr 1
-
-    # Workaround for conn_init not copying the updated firmware
-    rm /data/misc/wifi/WCNSS_qcom_cfg.ini
-    rm /data/misc/wifi/WCNSS_qcom_wlan_nv.bin
 
     # LED On/Off synchronization
     chown system system /sys/class/leds/red/device/lock
@@ -92,10 +88,11 @@ service p2p_supplicant /system/bin/wpa_supplicant \
     disabled
     oneshot
 
-service conn_init /system/bin/logwrapper /system/bin/conn_init
+service wcnss_init /system/bin/sh /system/etc/init.geehrc.wifi.sh
     class late_start
     user system
     group system wifi
+    seclabel u:r:conn_init:s0
     oneshot
 
 service fm_dl /system/bin/sh /system/etc/init.gee.fm.sh
